@@ -1,4 +1,2 @@
 <h1>DIRECTOR PAGE</h1>
-<p>Tu sam</p>
-<!-- svidja mi se muzika -->
-<!-- gledaj sada ovo.  -->
+<h1>Dobrodosli <?php echo $_SESSION['user']['first_name'] .' ' .$_SESSION['user']['last_name'];  ?></h1>

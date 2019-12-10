@@ -2,7 +2,6 @@
 
 class View
 {
-	//ako hoces poostavi da bude static ladi lakseg pozivanja
 	public $data = array();
 	public static function load(string $folder, string $file)
 	{

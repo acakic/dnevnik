@@ -28,7 +28,6 @@
                     <option value="4">Teacher</option>
                     <option value="5">Parent</option>
                 </select>
-<!--				<input type="text" name="role_id" placeholder="Enter city name">-->
 
 				<input type="submit" name="registrate" value="Registrate">
 			</form>

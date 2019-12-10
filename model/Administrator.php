@@ -12,15 +12,12 @@ class Administrator
      */ 
     public function checkIfAvailable($email)
     {
-        var_dump($_POST);
-
-        //ovo je model, ovde ne stize post, post saljemo u controller
     	$query = 'select * from users where email = :email';
 		$stmt = $this->conn->prepare($query);
     	$stmt->bindParam(':email', $email);
     	$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
-		//ako ga nije nasao vrati true to jest da ne postoji nikoga sa tim emailom
+		//if is not found return true (email not exists in db)
 		if (!$result) {
 			return true;			
 		}
@@ -60,6 +57,5 @@ class Administrator
             return true;
         }
         return false;
-//        u stormu se sirimo aaa? ma da bre moram
     }
 }

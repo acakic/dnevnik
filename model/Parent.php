@@ -7,6 +7,9 @@ class Parents
     {
         $this->conn = $db;
     }
+    /*
+     * Method for returning data for student.
+     */
     public function getStudent($id_parent)
     {
         $query = 'select students.first_name, students.last_name, grade.class_grade';

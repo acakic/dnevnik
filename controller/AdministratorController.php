@@ -14,13 +14,6 @@ class AdministratorController
     public $id_parent = '';
     public $id_grade = '';
 
-    //    students params (data)
-//    public $sfirst_name = '';
-//    public $slast_name = '';
-//    public $id_class = '';
-//    public $id_parent = '';
-//    public $id_grade = '';
-
 
 	public function administratorpage()
 	{
@@ -212,12 +205,10 @@ class AdministratorController
                 }
                 header('Location: '. $_SERVER['HTTP_REFERER'] .'?error=' . $msg);
             } else {
-                // creates a new password hash, Use the md5 algorithm
-//                $enc_pass = md5($this->password);
+
                 global $conn;
                 $student = new Administrator($conn);
-                // checking if email exists in db.
-//                if ($student->userRegister($this->email)) {
+
                 $class_id = intval($this->id_class);
                 $grade_id = intval($this->id_grade);
                 $parent_id= intval($this->id_parent);
@@ -229,10 +220,6 @@ class AdministratorController
                         $msg = 'Pokusajte ponovo, nesto je pogresno!';
                         header('Location: '. $_SERVER['HTTP_REFERER'] .'?error=' . $msg);
                     }
-//                }else{
-//                    $msg = 'Email adresa vec postoji, pokusajte sa drugom';
-//                    header('Location: '. $_SERVER['HTTP_REFERER'] .'?error=' . $msg);
-////                }
             var_dump($POST);
             }
         }

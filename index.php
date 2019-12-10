@@ -10,10 +10,10 @@ foreach (glob('./model/*') as $model_name) {
 foreach (glob('./controller/*') as $controller_name) {
 	require_once($controller_name);
 }
+// instansiate db class
 require_once('./Database.php');
-// instanciranje klase Database
 $database = new Database();
-// povezivanje sa bazom
+// connecting with db;
 $conn = $database->connect();
 
 $request = new Request();

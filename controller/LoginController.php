@@ -32,7 +32,7 @@ class LoginController
 				$rola = $user->getRol($users_data['rol_id']);
 				$_SESSION['user'] = $users_data;
 				$_SESSION['rola'] = $rola;
-				// redirectujemo ga na controller koji smo pokupili iz baze i login je svakome prva strana, mozes da promenis ime i to je to
+//				// redirecting on controller which one we collect from base. And Login is first page for all users.
 				header('Location: http://dnevnik/'. $_SESSION['rola']['rola_description'] .'/'. $_SESSION['rola']['rola_description'] .'page/?succ=succesfful');
 			}else{
 				header('Location: ' . $_SERVER['HTTP_REFERER'] . '?err=wrong credentials');
@@ -41,12 +41,11 @@ class LoginController
 				header('Location: ' . $_SERVER['HTTP_REFERER'] . '?err=something went wrong');			
 		}
 	}
-	    /*
-     * Method for logout user! just unset session[rola];
-     */
+	/*
+    * Method for logout user! just unset session[rola];
+    */
     public function logout()
     {
-    	// zasto ovo ne radi?
         unset($_SESSION['rola']);
         // header('Location:http://dnevnik/login/login');
     }

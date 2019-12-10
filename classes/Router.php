@@ -1,5 +1,4 @@
 <?php 
-// check if unsets url params  
 
 class Router
 {

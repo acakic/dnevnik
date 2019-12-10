@@ -1,4 +1,4 @@
-			<!-- <h1>U LOGINU SMO</h1> -->
+			<!-- <h1>U LOGINU SAM</h1> -->
 			<?php if (!isset($_SESSION['rola'])): ?>
 				<div class="loginContainer">
 					<!-- <img src="../../pictures/loginbac.jpg"> -->

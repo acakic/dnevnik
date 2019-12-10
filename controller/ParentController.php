@@ -1,6 +1,4 @@
 <?php
-// pitati mentora da li je ovo pametno
-// $base = global $db;		
 
 class ParentController
 {
@@ -18,5 +16,4 @@ class ParentController
         unset($_SESSION['rola']);
         header('Location:http://dnevnik/login/login');
     }
-    
 }

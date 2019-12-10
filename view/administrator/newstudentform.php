@@ -11,11 +11,20 @@
 				<label for="last_name">Last Name</label>
 				<input type="text" name="last_name" placeholder="Enter Last Name" value="">
 
-				<label for="id_class">Classroom</label>
-				<input type="number" name="id_class" placeholder="Enter classroom">
+                <label for="date_of_birth">Birthday</label>
+				<input type="text" name="date_of_birth" placeholder="Enter Birthday" value="">
 
-				<label for="id_parent">Parent ID</label>
-				<input type="number" name="id_parent" placeholder="Enter parent id">
+                <label for="social_id">Social ID</label>
+                <input type="number" name="social_id" placeholder="Enter Social ID" value="">
+
+				<label for="id_class">Student group</label>
+				<input type="number" name="id_class" placeholder="Enter Student group id">
+
+				<label for="id_parent">Father ID (1)</label>
+				<input type="number" name="id_parent1" placeholder="Enter father id">
+
+                <label for="id_parent">Mother ID (2)</label>
+				<input type="number" name="id_parent2" placeholder="Enter mother id">
 
 				<label for="id_grade">Grade ID</label>
                 <select name="id_grade">
