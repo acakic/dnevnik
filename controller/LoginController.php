@@ -30,6 +30,7 @@ class LoginController
 			 $enc_password = md5($password);
 			if ($enc_password === $users_data['password']) {
 				$rola = $user->getRol($users_data['rol_id']);
+				$_SESSION['user'] = $users_data;
 				$_SESSION['rola'] = $rola;
 				// redirectujemo ga na controller koji smo pokupili iz baze i login je svakome prva strana, mozes da promenis ime i to je to
 				header('Location: http://dnevnik/'. $_SESSION['rola']['rola_description'] .'/'. $_SESSION['rola']['rola_description'] .'page/?succ=succesfful');

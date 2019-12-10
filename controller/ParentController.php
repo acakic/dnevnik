@@ -8,23 +8,15 @@ class ParentController
 	
 	public function parentpage()
 	{
-		View::load('parent', 'parentpage');
+        global $conn;
+        $student = new Parents($conn);
+        $_SESSION['student'] = $student->getStudent($_SESSION['user']['id_user']);
+        View::load('parent', 'parentpage');
 	}
     public function logout()
     {
         unset($_SESSION['rola']);
         header('Location:http://dnevnik/login/login');
     }
-
-
-    public function getStudents()
-    {
-        global $conn;
-        $student = new Parents($conn);
-        $if_exists = $student->getStudent($parent_id);
-        {
-            var_dump($if_exists);
-        }
-    }
-
+    
 }
